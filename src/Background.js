@@ -1,4 +1,8 @@
 import Layer from './Layer'
+import fgImage from "./assets/foreground_layer.png"
+import glImage from "./assets/ground_layer.png"
+import mlImage from "./assets/middle_layer.png"
+import slImage from "./assets/sky_layer.png"
 
 export default class Background {
   constructor(game) {
@@ -7,13 +11,13 @@ export default class Background {
     this.height = 500
 
     this.fg = new Image()
-    this.fg.src = "./src/assets/foreground_layer.png"
+    this.fg.src = fgImage
     this.gl = new Image()
-    this.gl.src = "./src/assets/ground_layer.png"
+    this.gl.src = glImage
     this.ml = new Image()
-    this.ml.src = "./src/assets/middle_layer.png"
+    this.ml.src = mlImage
     this.sl = new Image()
-    this.sl.src = "./src/assets/sky_layer.png"
+    this.sl.src = slImage
 
     this.backgroundLayers = [
       new Layer(this.game, this.width, this.height, 0.1, this.sl),

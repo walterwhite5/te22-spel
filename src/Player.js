@@ -1,11 +1,12 @@
 import GameObject from "./GameObject"
+import ssImage from "./assets/SpriteSheet.png"
 
 export default class Player extends GameObject {
   constructor(game) {
     super(game, 60, game.height - 80, 128, 128)
 
     this.image = new Image()
-    this.image.src = "./src/assets/SpriteSheet.png"
+    this.image.src = ssImage
 
     this.speedX = 0
     this.speedY = 0
